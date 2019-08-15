@@ -11,14 +11,11 @@ Laravel-ifx is an Informix Database Driver package for [Laravel Framework](http:
 
 Add `poyii/laravel-ifx` as a requirement to composer.json:
 
-```json
-{
-    "require": {
-        "poyii/laravel-ifx": "1.0.0"
-    }
-}
+```terminal
+$ composer require poyii/laravel-ifx
 ```
-And then run `composer update`
+
+Skip below step if you are running Laravel newer than 5.6.
 
 Once Composer has installed or updated your packages you need to register Informix DB. Open up `config/app.php` and find
 the `providers` key and add:
@@ -30,10 +27,10 @@ Poyii\Informix\InformixDBServiceProvider::class,
 Finally you need to publish a configuration file by running the following Artisan command.
 
 ```terminal
-$ php artisan vendor:publish
+$ php artisan vendor:publish --tag=config-informix
 ```
-This will copy the configuration file to config/informix.php
 
+This will copy the configuration file to `config/informix.php`
 
 ### License
 
