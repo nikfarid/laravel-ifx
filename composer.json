@@ -11,21 +11,29 @@
     }
   ],
   "require": {
-    "php": ">=5.5.31",
-    "illuminate/support": "5.2.*",
-    "illuminate/database": "5.2.*",
-    "illuminate/pagination": "5.2.*",
-    "illuminate/encryption": "5.2.*"
+    "php": ">=7.1",
+    "illuminate/support": "5.2.*|5.5.*|5.6.*|5.7.*|5.8.*",
+    "illuminate/database": "5.2.*|5.5.*|5.6.*|5.7.*|5.8.*",
+    "illuminate/pagination": "5.2.*|5.5.*|5.6.*|5.7.*|5.8.*",
+    "illuminate/encryption": "5.2.*|5.5.*|5.6.*|5.7.*|5.8.*"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",
-    "mockery/mockery": "~0.9.4",
-    "phpunit/phpunit": "~4.0",
-    "phpspec/phpspec": "~2.1"
+    "phpspec/phpspec": "~2.1",
+    "phpunit/phpunit": "~4.0|^6.5|^7.0|^8.0",
+    "orchestra/testbench": "3.5.*|3.6.*|3.7.*",
+    "mockery/mockery": "~0.9.4|^1.1"
+  },
+  "extra": {
+    "laravel": {
+        "providers": [
+            "Poyii\\Informix\\InformixDBServiceProvider"
+        ]
+    }
   },
   "autoload": {
     "psr-4": {
-      "Poyii\\": "src/Poyii"
+      "Poyii\\": "src/"
     }
   },
   "minimum-stability": "stable"

@@ -24,7 +24,7 @@ class InformixDBServiceProvider extends ServiceProvider
             [
                 __DIR__.'/../../config/informix.php' => config_path('informix.php'),
             ]
-        );
+        , 'config-informix');
     }
 
     /**
