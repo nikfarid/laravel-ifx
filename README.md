@@ -9,7 +9,7 @@ Laravel-ifx is an Informix Database Driver package for [Laravel Framework](http:
 
 ### Installation
 
-Add `poyii/laravel-ifx` as a requirement to composer.json:
+Require the package:
 
 ```terminal
 $ composer require poyii/laravel-ifx
