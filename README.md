@@ -24,13 +24,38 @@ the `providers` key and add:
 Poyii\Informix\InformixDBServiceProvider::class,
 ```
 
-Finally you need to publish a configuration file by running the following Artisan command.
+Finally, add the following in `config/database.php`, in `connections` key.
 
-```terminal
-$ php artisan vendor:publish --tag=config-informix
+```php
+'informix' => [
+    'driver'          => 'informix',
+    'host'            => env('DB_HOST', 'localhost'),
+    'database'        => env('DB_DATABASE', 'forge'),
+    'username'        => env('DB_USERNAME', 'forge'),
+    'password'        => env('DB_PASSWORD', ''),
+    'service'         => env('DB_SERVICE', '11143'),
+    'server'          => env('DB_SERVER', ''),
+    'db_locale'       => 'en_US.819',
+    'client_locale'   => 'en_US.819',
+    'db_encoding'     => 'GBK',
+    'initSqls'        => false,
+    'client_encoding' => 'UTF-8',
+    'prefix'          => '',
+],
 ```
 
 This will copy the configuration file to `config/informix.php`
+
+### Set Informix DB `.env`
+
+You may need to add the following in the `.env` file if you are not have it in your environment setup.
+
+```
+INFORMIXDIR=/opt/IBM/informix
+INFORMIXSERVER=ol-your-server
+LD_LIBRARY_PATH=/opt/IBM/informix/lib/:/opt/IBM/informix/lib/cli:/opt/IBM/informix/lib/esql
+PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/IBM/informix/bin:/opt/IBM/informix/lib
+```
 
 ### License
 
