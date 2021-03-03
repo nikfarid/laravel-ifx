@@ -33,7 +33,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Poyii\\": "src/"
+      "Poyii\\": "vendor/poyii/laravel-ifx/src/Poyii/"
     }
   },
   "minimum-stability": "stable"
